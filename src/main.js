@@ -17,6 +17,9 @@ app.whenReady().then(() => {
             mainWindow.focus();
         }
     });
+    globalShortcut.register('Esc', () => {
+        mainWindow.hide();
+    });
 
     app.on('window-all-closed', () => {
         if (process.platform !== 'darwin') {

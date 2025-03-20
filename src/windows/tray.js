@@ -9,6 +9,7 @@ function createTray(mainWindow) {
     const trayMenu = Menu.buildFromTemplate([
         {
             label: 'Abrir Spotlight',
+            accelerator: 'Shift+Command+Space', // Adicionar atalho
             click: () => {
                 if (mainWindow.isVisible()) {
                     mainWindow.hide();
