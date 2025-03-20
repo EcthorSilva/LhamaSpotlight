@@ -3,8 +3,8 @@ const path = require('path');
 
 function createMainWindow() {
     let mainWindow = new BrowserWindow({
-        width: 600,
-        height: 80,
+        width: 750, // Ajustar largura
+        height: 292, // Ajustar altura
         frame: false,
         alwaysOnTop: true,
         transparent: true,

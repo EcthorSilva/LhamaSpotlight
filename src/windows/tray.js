@@ -1,5 +1,6 @@
 const { Tray, Menu, nativeImage, app } = require('electron');
 const path = require('path');
+const { dialog } = require('electron');
 
 function createTray(mainWindow) {
     const trayIcon = nativeImage.createFromPath(path.join(__dirname, '../assets/llama.png')).resize({ width: 20, height: 20 });
@@ -17,7 +18,15 @@ function createTray(mainWindow) {
                 }
             }
         },
-        { label: 'Configurações', click: () => console.log('Abrir configurações') },
+        { 
+            label: 'Configurações', 
+            click: () => dialog.showMessageBox({
+                type: 'info',
+                buttons: ['OK'],
+                title: 'Configurações',
+                message: 'A opção de configurações ainda não está disponível.'
+            })
+        },
         { label: 'Sair', click: () => app.quit() }
     ]);
 
