@@ -9,19 +9,23 @@ let tray;
 app.whenReady().then(() => {
     mainWindow = createMainWindow();
     tray = createTray(mainWindow);
-    
-    app.dock.setIcon(path.join(__dirname, './assets/lama-2.png'));
+
+    app.dock.hide();
 
     globalShortcut.register('Shift+Command+Space', () => {
         if (mainWindow.isVisible()) {
             mainWindow.hide();
+            app.dock.hide();
         } else {
             mainWindow.show();
             mainWindow.focus();
+            app.dock.show();
         }
     });
+
     globalShortcut.register('Esc', () => {
         mainWindow.hide();
+        app.dock.hide();
     });
 
     app.on('window-all-closed', () => {
