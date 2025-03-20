@@ -13,9 +13,11 @@ function createTray(mainWindow) {
             click: () => {
                 if (mainWindow.isVisible()) {
                     mainWindow.hide();
+                    app.dock.hide();
                 } else {
                     mainWindow.show();
                     mainWindow.focus();
+                    app.dock.show();
                 }
             }
         },
