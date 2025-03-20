@@ -1,0 +1,24 @@
+{
+  "name": "lhamaspotlight",
+  "version": "1.0.0",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EcthorSilva/LhamaSpotlight.git"
+  },
+  "author": "Ecthor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EcthorSilva/LhamaSpotlight/issues"
+  },
+  "homepage": "https://github.com/EcthorSilva/LhamaSpotlight#readme",
+  "description": "",
+  "devDependencies": {
+    "electron": "^35.0.2"
+  }
+}
