@@ -55,6 +55,11 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
     });
+
+    window.electron.receive('clear-input', () => {
+        input.value = '';
+        responseContainer.textContent = '';
+    });
 });
 
 console.log("LhamaSpotlight iniciado com sucesso!");

@@ -19,6 +19,10 @@ function createMainWindow() {
     mainWindow.loadFile(path.join(__dirname, '../renderer/index.html'));
     mainWindow.hide();
 
+    mainWindow.on('show', () => {
+        mainWindow.webContents.send('clear-input');
+    });
+
     return mainWindow;
 }
 
