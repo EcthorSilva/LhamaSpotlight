@@ -1,19 +1,36 @@
+/* Scrollbars */
+*::-webkit-scrollbar-track {
+    /* cor e reio da faixa da barra de rolagem */
+    background-color: #212529;
+}
+*::-webkit-scrollbar {
+    /* Largura e altura da barra de rolagem */
+    width: 6px;
+    height: 6px;
+    background-color: #ffffff;
+}
+*::-webkit-scrollbar-thumb {
+    /* Cor e raio do "polegar" da barra de rolagem */
+    background-color: #88888881;
+    border-radius: 35px;
+}
+.overflow-auto {
+    scroll-behavior: smooth;
+}
 body {
-    background: rgba(0, 0, 0, 0.8);
     margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
 }
-
-input {
-    width: 90%;
-    padding: 10px;
-    font-size: 18px;
-    color: white;
-    background: none;
-    border: none;
-    outline: none;
-    text-align: center;
+.spotlight {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 8px;
+}
+.card {
+    min-height: 118px;
+    max-height: 118px;
+    overflow-y: auto; /* Adiciona barra de rolagem vertical */
 }
