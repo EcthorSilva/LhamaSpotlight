@@ -9,7 +9,8 @@
     ],
     "mac": {
         "category": "public.app-category.productivity",
-        "target": "dmg"
+        "target": "dmg",
+        "icon": "src/assets/lama-2.png"
     },
     "win": {
         "target": "nsis"
