@@ -3,7 +3,7 @@ const path = require('path');
 const { dialog } = require('electron');
 
 function createTray(mainWindow) {
-    const trayIcon = nativeImage.createFromPath(path.join(__dirname, '../assets/llama.png')).resize({ width: 20, height: 20 });
+    const trayIcon = nativeImage.createFromPath(path.join(__dirname, '../assets/lama.png')).resize({ width: 20, height: 20 });
     let tray = new Tray(trayIcon);
 
     const trayMenu = Menu.buildFromTemplate([
@@ -13,9 +13,11 @@ function createTray(mainWindow) {
             click: () => {
                 if (mainWindow.isVisible()) {
                     mainWindow.hide();
+                    app.dock.hide();
                 } else {
                     mainWindow.show();
                     mainWindow.focus();
+                    app.dock.show();
                 }
             }
         },
