@@ -1,0 +1,17 @@
+{
+    "appId": "com.lhamaspotlight.app",
+    "productName": "LhamaSpotlight",
+    "directories": {
+        "output": "dist"
+    },
+    "files": [
+        "src/**/*"
+    ],
+    "mac": {
+        "category": "public.app-category.productivity",
+        "target": "dmg"
+    },
+    "win": {
+        "target": "nsis"
+    }
+}
